@@ -21,3 +21,18 @@ jobs:
 
       - name: Run linting
         run: yarn lint
+
+      - name: Set up QEMU
+        run: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        run: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: |
+            pjee4212/webapp:latest
+
