@@ -41,5 +41,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: pjee4212/webapp:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
 
