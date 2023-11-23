@@ -47,7 +47,7 @@ jobs:
         run: docker-compose up -d
 
       - name: Log Docker Container
-        run: docker logs container-webapp
+        run: docker ps
 
       - name: Stop Docker Compose
         run: docker-compose down
