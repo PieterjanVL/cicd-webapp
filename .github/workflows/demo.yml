@@ -46,7 +46,7 @@ jobs:
       - name: Start Docker Compose
         run: docker-compose up -d
 
-      - name: Start Docker Compose
+      - name: Test Docker Container
         run: docker-compose run tests
 
       - name: Stop Docker Compose
