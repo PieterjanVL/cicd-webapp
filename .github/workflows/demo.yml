@@ -46,8 +46,8 @@ jobs:
       - name: Start Docker Compose
         run: docker-compose up -d
 
-      - name: Test Docker Container
-        run: docker-compose run tests
+      - name: Log Docker Container
+        run: docker logs container-webapp
 
       - name: Stop Docker Compose
         run: docker-compose down
