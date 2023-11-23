@@ -43,10 +43,14 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
 
+      - name: yarn test
+        run: yarn test
+
+
       - name: Start Docker Compose
         run: docker-compose up -d
 
-      - name: Log Docker Container
+      - name: Check Docker Container
         run: docker ps
 
       - name: Stop Docker Compose
