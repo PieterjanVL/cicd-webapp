@@ -52,7 +52,6 @@ jobs:
       - name: yarn test
         run: yarn test
 
-        
       - name: Stop Docker Compose
         run: docker-compose down
 
